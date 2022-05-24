@@ -1,4 +1,10 @@
 
+html {
+    border: 1px solid azuregit add .;
+    margin-right: 300px;
+    margin-left: 300px;
+    background-color: azure;
+}
 header {
     background-color: aquamarine;
 }
@@ -20,6 +26,7 @@ header {
         margin: 0 auto;
         font-size: 15px;
         background-color: beige;
+       
          }
 
 
