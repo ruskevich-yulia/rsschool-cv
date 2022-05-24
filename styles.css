@@ -5,8 +5,13 @@ html {
     margin-left: 300px;
     background-color: azure;
 }
+
+.container {
+    width: 700px;
+}
 header {
     background-color: aquamarine;
+    
 }
 
 
