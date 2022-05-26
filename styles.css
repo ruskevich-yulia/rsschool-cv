@@ -115,7 +115,7 @@ main .workExp b::after {
 .foto {
      width: 30%;
      aspect-ratio: 1;
-     transform: rotate(-45deg);
+     transform: rotate(45deg);
      border: 5px solid #d97b3a;
      border-radius: 10px;
      overflow: hidden;
