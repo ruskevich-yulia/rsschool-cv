@@ -1,66 +1,230 @@
 
-html {
-    border: 1px solid azure;
-    margin-right: 300px;
-    margin-left: 300px;
-    background-color: azure;
- }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    font-size: 15px;
+
+    background: beige;
+    background: linear-gradient(30deg, rgba(2, 0, 36, 1) 0%, rgb(30, 30, 30) 35%, rgb(52, 52, 52) 100%);
+}
 
 .container {
-    width: 700px;
+max-width: 700px;
+background: white;
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
+
 header {
-    background-color: aquamarine;
-    
+    height: 10%;
+    background-color:  rgba(141, 14, 71, 0.7);
+    font-family: "Lobster", sans-serif;
+    -webkit-box-shadow: 0px 7px 7px 0px #000000;
+    box-shadow: 0px 7px 7px 0px #000000;
+    }
+
+
+    .name  {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .name h1 {
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+    .name h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .name h1 h2 {
+        text-align: center;
+    }
+
+section {
+    padding: 20px;
+    position: relative;
 }
 
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
 
+    background: rgba(215, 160, 122, 0.5);
 
-   .name {
-        display: flex;
-        border: 1px solid black;
-        flex-direction: column;
-        align-items: center;
-      }
+    padding: 0 10px;
 
+    overflow: scroll;
+}
 
-    body {
-        display: flex;
-        flex-direction: column;
-        max-width: 700px;
-        margin: 0 auto;
-        font-size: 15px;
-        background-color: beige;
-       
-         }
+.contFoto {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 
+.contact ol {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
-    .contFoto {
-        display: flex;
-        justify-content:space-around ;
-     }
+main ol b,
+main ul b,
+main .education b,
+main workExp b
+{
+    position: relative;
+    text-align: center;
+}
 
-     .foto {
-         border-radius: 50% ;
-         border: 5px solid blue;
+main ol b::after,
+main ul b::after,
+main .education b::after,
+main .workExp b::after {
+       content: "";
+       position: absolute;
+       top: 20px;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       border-radius: 50%;
+       background: black;
+}
 
-     }
+.foto {
+     width: 30%;
+     aspect-ratio: 1;
+     transform: rotate(-45deg);
+     border: 5px solid #d97b3a;
+     border-radius: 10px;
+     overflow: hidden;
 
+     display: flex;
+     justify-content: center;
 
+     position: relative;
+     -webkit-box-shadow: 7px 7px 12px -6px #000000;
+     box-shadow: 7px 7px 12px -6px #000000;
+}
 
-    .langEng {
-        display: flex;
-        justify-content: space-around;
-     }
+.foto img{
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -40px;
+    top: -64px;
+}
 
+main section::after {
+     content: "";
+     position: absolute;
+     top: 110%;
+     left: 10%;
+     width: 80%;
+     height: 2px;
+     border-radius: 50%;
+     background: #a6a6a6;
+}
 
-    .workExp {
-        display: flex;
-        justify-content: center;
-     }
+.langEng {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
 
+.languages,
+.education,
+.skills,
+.petProject
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
 
-   .skillProj {
-       display: flex;
-       justify-content:space-around ;
-    }
+main .education {
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: center;
+}
+
+.languages ul {
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+}
+
+.workExp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    padding: 5px;
+    margin: 0 20px;
+}
+
+.skillProj {
+   display: flex;
+   justify-content: space-around;
+   gap: 5px;
+}
+
+.skillProj .skills ul,
+.skillProj .petProject ol 
+ {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+ }
+
+ footer {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     background: rgb(42, 42, 42);
+     color: white;
+     padding: 5px;
+
+ }
+
+ footer img {
+     border-radius: 50%;
+     border: 2px solid white;
+ }
+
+ footer img:hover {
+     transform: scale(1.5);
+     transition: transform, 1s;
+ }
